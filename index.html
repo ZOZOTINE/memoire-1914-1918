@@ -1,122 +1,149 @@
-<section class="gallery" id="galerie">
-  <h2>Images d'archives — 1914–1918</h2>
+<!-- L'ÂME FRANÇAISE -->
+<section id="ame-francaise" class="soul-section">
+  <div class="soul-background"></div>
 
-  <div class="gallery-grid">
+  <div class="soul-content reveal">
+    <span class="soul-label">1914 — 1918 · MÉMOIRE</span>
 
-    <article class="photo">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/French%20soldiers%20in%20the%20trenches%20during%20World%20War%20I.jpg"
-           alt="Soldats français dans les tranchées"
-           onclick="openPhoto(this)">
-      <h3>Dans les tranchées</h3>
-      <p>Le quotidien des soldats sur le front.</p>
-    </article>
+    <h2>L'âme française</h2>
 
-    <article class="photo">
-      <img src="https://images.unsplash.com/photo-1519074069444-1ba4fff66d16"
-           alt="Paysage de guerre"
-           onclick="openPhoto(this)">
-      <h3>Un paysage bouleversé</h3>
-      <p>La guerre transforme profondément les paysages.</p>
-    </article>
+    <div class="soul-line"></div>
 
-    <article class="photo">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/World%20War%20I%20soldiers.jpg"
-           alt="Soldats de la Première Guerre mondiale"
-           onclick="openPhoto(this)">
-      <h3>Les soldats</h3>
-      <p>Des millions d'hommes mobilisés.</p>
-    </article>
+    <p class="soul-text">
+      Il y a des histoires que le temps ne peut effacer.
+      Des visages, des lettres, des villages silencieux
+      et des millions de destins bouleversés.
+    </p>
 
+    <p class="soul-text">
+      Pendant quatre années, la France traverse l'une des
+      périodes les plus sombres de son histoire. Dans les
+      villes comme dans les campagnes, chacun porte à sa
+      manière le poids de la guerre.
+    </p>
+
+    <p class="soul-text">
+      L'âme française vit dans la solidarité, dans le courage
+      de continuer, dans les familles qui attendent, dans
+      les lettres que l'on conserve et dans l'espoir de revoir
+      un jour la paix.
+    </p>
+
+    <p class="soul-text">
+      Elle est aussi faite de toutes les origines, de tous les
+      territoires et de toutes les personnes qui ont participé
+      à cette histoire, parfois dans l'ombre, parfois oubliées.
+    </p>
+
+    <p class="soul-text">
+      Aujourd'hui, nous ne regardons pas ces années pour
+      glorifier la guerre. Nous regardons pour comprendre,
+      pour transmettre et pour ne pas oublier.
+    </p>
+
+    <div class="soul-quote">
+      <p>
+        « Une mémoire vivante, pour que la paix ne soit
+        jamais oubliée. »
+      </p>
+    </div>
+
+    <div class="soul-poppy">🌺</div>
+    <span class="soul-footer">SE SOUVENIR · COMPRENDRE · TRANSMETTRE</span>
   </div>
 </section>
 
-<!-- Fenêtre d'agrandissement -->
-<div id="photoModal" class="photo-modal" onclick="closePhoto()">
-  <span class="close">&times;</span>
-  <img id="modalImage">
-  <p id="modalCaption"></p>
-</div>
-
 <style>
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-
-.photo {
-  background: #151923;
-  padding: 15px;
-  border-radius: 15px;
-  color: white;
-}
-
-.photo img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform .4s, filter .4s;
-  filter: grayscale(100%);
-}
-
-.photo img:hover {
-  transform: scale(1.03);
-  filter: grayscale(0%);
-}
-
-.photo-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.95);
-  z-index: 9999;
-  justify-content: center;
+.soul-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 8%;
+  display: flex;
   align-items: center;
-  flex-direction: column;
-  padding: 25px;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(5,8,14,.90), rgba(5,8,14,.97)),
+    url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8');
+  background-size: cover;
+  background-position: center;
+  color: #e9e5dc;
 }
 
-.photo-modal img {
-  max-width: 90%;
-  max-height: 80vh;
-  border-radius: 10px;
-  animation: zoomIn .35s ease;
+.soul-content {
+  max-width: 850px;
+  text-align: center;
+  z-index: 2;
 }
 
-.photo-modal p {
-  color: white;
-  margin-top: 15px;
+.soul-label {
+  color: #c6a66b;
+  letter-spacing: 6px;
+  font-size: 12px;
 }
 
-.close {
-  color: white;
+.soul-content h2 {
+  font-size: clamp(45px, 7vw, 85px);
+  font-weight: 400;
+  margin: 30px 0;
+  font-family: Georgia, serif;
+}
+
+.soul-line {
+  width: 80px;
+  height: 1px;
+  background: #c6a66b;
+  margin: 35px auto;
+}
+
+.soul-text {
+  font-family: Georgia, serif;
+  font-size: 19px;
+  line-height: 2;
+  color: #c6c8cc;
+  margin: 25px 0;
+}
+
+.soul-quote {
+  border-left: 1px solid #c6a66b;
+  border-right: 1px solid #c6a66b;
+  margin: 65px auto;
+  padding: 20px;
+}
+
+.soul-quote p {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-style: italic;
+  color: #e3c990;
+}
+
+.soul-poppy {
   font-size: 40px;
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 35px;
+  animation: poppyFloat 4s ease-in-out infinite;
+  margin: 30px 0;
 }
 
-@keyframes zoomIn {
-  from { transform: scale(.7); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+.soul-footer {
+  color: #9c9da4;
+  letter-spacing: 4px;
+  font-size: 10px;
+}
+
+@keyframes poppyFloat {
+  0%, 100% { transform: translateY(0); opacity: .7; }
+  50% { transform: translateY(-12px); opacity: 1; }
+}
+
+@media(max-width:600px) {
+  .soul-section {
+    padding: 90px 25px;
+  }
+  .soul-text {
+    font-size: 16px;
+  }
+  .soul-quote p {
+    font-size: 21px;
+  }
 }
 </style>
-
-<script>
-function openPhoto(img) {
-  const modal = document.getElementById("photoModal");
-  const modalImage = document.getElementById("modalImage");
-  const caption = document.getElementById("modalCaption");
-
-  modalImage.src = img.src;
-  caption.textContent = img.alt;
-  modal.style.display = "flex";
-}
-
-function closePhoto() {
-  document.getElementById("photoModal").style.display = "none";
-}
-</script>
